@@ -5,7 +5,7 @@ Pod::Spec.new do |spec|
  
 
   spec.name         = "WSZLib"
-  spec.version      = "0.0.2"
+  spec.version      = "0.0.3"
   spec.summary      = "A short description of WSZLib."
 
   
@@ -21,7 +21,7 @@ TODO: Add long description of the pod here.
   spec.source           = { :git => 'https://github.com/wangsizhe/WSZLib.git', :tag => "#{spec.version}" }
 
 
-  spec.ios.deployment_target = '8.0'
+  spec.ios.deployment_target = '9.0'
 
 
  
