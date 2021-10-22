@@ -12,7 +12,7 @@ Pod::Spec.new do |spec|
   spec.description  = <<-DESC
 TODO: Add long description of the pod here.
                    DESC
-  spec.vendored_frameworks  = 'ToygerService.framework','ZolozUtility.framework'
+  spec.vendored_frameworks  = 'AliyunIdentityManager.framework','AliyunIdentityManager.framework','APBToygerFacade.framework','APPSecuritySDK.framework','BioAuthAPI.framework','BioAuthEngine.framework','MPRemoteLogging.framework','OCRDetectSDKForTech.framework','ToygerService.framework','ZolozIdentityManager.framework','ZolozMobileRPC.framework','ZolozOpenPlatformBuild.framework','ZolozSensorServices.framework','ZolozUtility.framework'
   spec.homepage     = "https://github.com/wangsizhe/WSZLib"
 
 
@@ -24,10 +24,6 @@ TODO: Add long description of the pod here.
   spec.ios.deployment_target = '8.0'
 
 
-  spec.source_files  = "Classes", "Classes/**/*.{h,m}"
-  spec.exclude_files = "Classes/Exclude"
-
  
-  spec.dependency 'WSZLib.'
 
 end
