@@ -14,7 +14,7 @@ TODO: Add long description of the pod here.
                    DESC
   spec.vendored_frameworks  = 'AliyunIdentityManager.framework','AliyunIdentityManager.framework','APBToygerFacade.framework','APPSecuritySDK.framework','BioAuthAPI.framework','BioAuthEngine.framework','MPRemoteLogging.framework','OCRDetectSDKForTech.framework','ToygerService.framework','ZolozIdentityManager.framework','ZolozMobileRPC.framework','ZolozOpenPlatformBuild.framework','ZolozSensorServices.framework','ZolozUtility.framework'
   spec.homepage     = "https://github.com/wangsizhe/WSZLib"
-  spec.frameworks   = 'CoreGraphics.framework','Accelerate.framework'
+  spec.frameworks   = 'CoreGraphics','Accelerate'
 
   spec.license          = { :type => 'MIT', :file => 'LICENSE' }
   spec.author           = { 'wangsizhe' => 'wsz01233239@antgroup.com' }
