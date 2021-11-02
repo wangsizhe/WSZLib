@@ -5,12 +5,10 @@ Pod::Spec.new do |spec|
  
 
   spec.name         = "WSZLib"
-  spec.version      = "3.0.0"
+  spec.version      = "3.0.1"
   spec.summary      = "A short description of WSZLib."
 
-  spec.resource_bundles = {
-   'WSZLib' => ['*.bundle']
-  }
+  spec.resources = ['*.bundle']
   spec.description  = <<-DESC
 TODO: Add long description of the pod here.
                    DESC
