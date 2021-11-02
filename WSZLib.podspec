@@ -5,7 +5,7 @@ Pod::Spec.new do |spec|
  
 
   spec.name         = "WSZLib"
-  spec.version      = "2.0.0"
+  spec.version      = "2.0.1"
   spec.summary      = "A short description of WSZLib."
 
   spec.resource_bundles = {
@@ -18,7 +18,7 @@ TODO: Add long description of the pod here.
   spec.homepage     = "https://github.com/wangsizhe/WSZLib"
   spec.frameworks     = "CoreGraphics","Accelerate","SystemConfiguration","AssetsLibrary","CoreTelephony","QuartzCore","CoreFoundation","CoreLocation","ImageIO","CoreMedia","CoreMotion","AVFoundation","WebKit","AudioToolbox","CFNetwork","MobileCoreServices","AdSupport"
   spec.libraries   = "resolv","z","c++.1","c++abi","z.1.2.8"
-
+  spec.user_target_xcconfig = { ‘ENABLE_BITCODE’ => ‘NO’ }
   spec.license          = { :type => 'MIT', :file => 'LICENSE' }
   spec.author           = { 'wangsizhe' => 'wsz01233239@antgroup.com' }
   spec.source           = { :git => 'https://github.com/wangsizhe/WSZLib.git', :tag => "#{spec.version}" }
