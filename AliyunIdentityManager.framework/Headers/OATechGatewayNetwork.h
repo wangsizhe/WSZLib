@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(void)sendInitFaceVerifyContent:(NSDictionary*)serviceParameters keyName:(NSString*)name completionBlock:(void (^) (BOOL success,NSURLResponse *response, NSData *data))completionBlock withEndPoint:(NSString*)point;
 
+- (void)setupPersonKey:(NSString *)aPersonKey personValue:(NSString *)aPersonValue;
 
 @end
 

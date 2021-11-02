@@ -11,6 +11,9 @@
 
 @interface APBToygerFacade : NSObject <IBioAuthFactor>
 
++(void)setTokenid:(NSString*)info;
++(NSString*)getTokenid;
+
 @end
 
 #import <APBToygerFacade/APBToygerCherryDetectTask.h>

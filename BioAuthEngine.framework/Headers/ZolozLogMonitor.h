@@ -10,6 +10,8 @@
 
 @interface ZolozLogMonitor : NSObject
 
++(instancetype)getInstance;
+
 - (instancetype)initWithBizInfo:(NSDictionary *)bizInfo;
 
 - (void)addPublicLog:(NSDictionary *)logDic;

@@ -7,27 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "APSecureSdk.h"
 #import "ASSTokenResult.h"
-
-/*!
- @typedef ASSStatusCode
- 
- Possible return codes
- @constant ASSStatusCodeOk                       Completed, No errors
- @constant ASSStatusCodeInvalidParam             input param invalid
- @constant ASSStatusCodeAppNameNil               appName is nil
- @constant ASSStatusCodeAppKeyNil                appKeyClient is nil
- @constant ASSStatusCodeConnectionError          network connection failure
- */
-typedef NS_ENUM(NSInteger, ASSStatusCode)
-{
-    ASSStatusCodeOk = 0,
-    ASSStatusCodeInvalidParam,
-    ASSStatusCodeAppNameNil,
-    ASSStatusCodeAppKeyNil,
-    ASSStatusCodeConnectionError,
-    
-};
 
 typedef void(^ASSSecureSdkCallbackOpen)(NSString* token, int errorCode);
 
@@ -36,15 +17,29 @@ typedef void(^ASSSecureSdkCallbackOpen)(NSString* token, int errorCode);
 /*
  异步初始化vkeyid，推荐在app启动时和收银台页面加载时调用，SDK内部会根据时间戳和设备信息进行判断是否需要进行网络请求，无线程要求
  @param appName      应用名称
- 
  @param appKeyClient 应用客户端密钥
- 
  @param callback     初始化完成后的结果回调，以Token作为参数
- 
  */
 + (void)initToken:(NSString *)appName appKeyClient:(NSString *)appKeyClient callback:(ASSSecureSdkCallbackOpen)callback;
 
+
+/*
+ 异步初始化vkeyid，推荐在app启动时和收银台页面加载时调用，SDK内部会根据时间戳和设备信息进行判断是否需要进行网络请求，无线程要求
+ @param appName         应用名称
+ @param appKeyClient    应用客户端密钥
+ @param parameters      业务方按约定的自定义参数
+ @param callback        初始化完成后的结果回调，以Token作为参数
+ */
 + (void)initToken:(NSString *)appName appKeyClient:(NSString *)appKeyClient parameters:(NSDictionary*)inArgs callback:(ASSSecureSdkCallbackOpen)callback;
+
+/*
+ 异步强制更新vkeyid，推荐在app启动时和收银台页面加载时调用，无线程要求
+ @param appName         应用名称
+ @param appKeyClient    应用客户端密钥
+ @param parameters      业务方按约定的自定义参数
+ @param callback        初始化完成后的结果回调，以Token作为参数
+ */
++ (void)updateToken:(NSString *)appName appKeyClient:(NSString *)appKeyClient parameters:(NSDictionary*)inArgs callback:(ASSSecureSdkCallbackOpen)callback;
 
 /*
  VKEYID和VKEYID token的接口，无网络请求。
@@ -65,5 +60,18 @@ typedef void(^ASSSecureSdkCallbackOpen)(NSString* token, int errorCode);
  *设置自定义的网关地址
  */
 + (void)setGatewayAddress:(NSString*)addr;
+
++ (void)setRpcConfiguration:(NSDictionary *) config;
+
+
+/**
+* 感知埋点。
+* appName - 应用名 （智科人脸：“zorro”）
+* appKeyClient - 应用key （智科人脸：“elBwppCSr9nB1LIQ”）
+* action - 感知行为编号
+* extParams - 可选扩展参数，以map方式传参
+*/
+//+(APRiskResult*)APPerceptRisk:(NSString*)appName appKeyClient:(NSString*)appKeyClient userAction:(NSInteger)action extParams:(NSDictionary *)args;
+
 
 @end

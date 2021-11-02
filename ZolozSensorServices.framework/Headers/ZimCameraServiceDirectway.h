@@ -34,6 +34,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic , strong ,nullable)NSData *faceData; // add for OCR
 @property(nonatomic , strong ,nullable)NSData *countryData;  // add for OCR
 
+@property(nonatomic , assign)BOOL simpleFlags; //安全SDK的Flags
+@property(nonatomic ,assign)BOOL tempddsFlags;//是否需要做安全加密
+
+
 
 + (ZimCameraServiceDirectway *)sharedInstance;
 @end

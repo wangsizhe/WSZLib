@@ -4,13 +4,17 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Headers/ZDeviceInfo.h</key>
+		<data>
+		+ZugfSehhPwaPzQgTgAYhIm0aUU=
+		</data>
 		<key>Headers/ZolozOpenPlatformBuild.h</key>
 		<data>
 		pR9jlvd6aCmRGo/KxmGLRWO/wMc=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		aOQRy11xxzcOCszZMNYXCXcVxLI=
+		W4wqug97TGBLVo42Cy4jafAdx4w=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -19,6 +23,17 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Headers/ZDeviceInfo.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			+ZugfSehhPwaPzQgTgAYhIm0aUU=
+			</data>
+			<key>hash2</key>
+			<data>
+			EIv+IOlFO1dwmUNtZi5Q7x18AwsH3rJtj+xLvAzrUd8=
+			</data>
+		</dict>
 		<key>Headers/ZolozOpenPlatformBuild.h</key>
 		<dict>
 			<key>hash</key>

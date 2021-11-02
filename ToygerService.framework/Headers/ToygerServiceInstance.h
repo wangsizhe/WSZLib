@@ -137,4 +137,10 @@
 + (NSArray<NSString *> *)metaInfo;
 
 
+/**
++获取活体检测后的状态
+*/
++(NSInteger)getToygerState;
+
+
 @end
